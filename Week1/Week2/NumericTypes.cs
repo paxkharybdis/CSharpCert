@@ -1,3 +1,4 @@
+using System;
 namespace Week2
 {
     public class NumericTypes
@@ -27,7 +28,7 @@ namespace Week2
 
         #region Real
 
-        private float myFloatValue = -123.6589F;
+        private float _myFloatValue = -123.6589F;
 
         private double _myDoubleValue = 12.34D;
 
@@ -40,5 +41,66 @@ namespace Week2
         #endregion
 
         
+        public void ConvertFloatToInt() // void indicates no return type
+        {
+            int converted = (int)_myFloatValue;
+            
+        }
+
+        public long LongFromInt(int value) // long is the return type, which means there 
+        {
+            return value;
+        }
+
+        public void IncrementDecrement()
+        {
+            int myVal = 1, myOtherval = 10;
+
+            Console.WriteLine(myVal++);
+            Console.WriteLine(myOtherval--);
+            Console.WriteLine(--myVal);
+            Console.WriteLine(++myOtherval);
+
+        }
+
+        public void GetSomeTypes()
+        {
+            Console.WriteLine(3.0.GetType());
+            Console.WriteLine(_myFloatValue.GetType());
+        }
+
+        public void BasicMath()
+        {
+            int myVal = 5, myOther = 10;
+
+            int addVal = myVal + myOther;
+            int subtractVal = myOther - myVal;
+            int multiplyVal = myOther * myVal;
+            int divisionVal = myVal / myOther;
+
+            int total = (addVal * multiplyVal) - divisionVal;
+
+            Console.WriteLine(addVal);
+        }
+
+        public void ChedkOperatorType()
+        {
+        
+            int val = 100, val2 = 100;
+
+            int testValue = checked(val * val2); //one way of multiplying val and val2
+
+            checked // another way of doing the same ^
+            {
+                int myCheck = val * val2;
+            }
+
+            Console.WriteLine(testValue);
+
+
+
+            
+        }
+
     }
 }
