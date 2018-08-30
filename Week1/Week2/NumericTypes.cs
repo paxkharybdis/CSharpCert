@@ -96,11 +96,22 @@ namespace Week2
             }
 
             Console.WriteLine(testValue);
-
-
-
-            
+   
         }
+
+        public void SpecialValues()
+        {
+            Console.WriteLine(2.0 / 0.0);
+            Console.WriteLine(-2.0 / 0.0);
+            Console.WriteLine(2.0 / -0.0);
+            Console.WriteLine(-2.0 / -0.0);
+            Console.WriteLine(0.0 / 0.0);
+            Console.WriteLine((2.0 / -0.0) - (2.0 / 0.0));
+            Console.WriteLine(0.0 / -0.0 == double.NaN);
+            Console.WriteLine(double.IsNaN(0.0 / 0.0));
+            Console.WriteLine(object.Equals(0.0 / 0.0, double.NaN));
+        }
+
 
     }
 }
