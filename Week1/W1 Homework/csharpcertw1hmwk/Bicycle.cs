@@ -9,7 +9,6 @@ namespace Week1.W1_Homework.csharpcertw1hmwk
         // Class variable: Field
         private string _handlebar;
       
-
         // Class variable:  Auto Property
         public virtual int Gears {get;} =7;
 
