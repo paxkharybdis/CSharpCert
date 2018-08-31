@@ -44,7 +44,5 @@ namespace Week1.W1_Homework.csharpcertw1hmwk
             Console.WriteLine(type);
         }
 
-
-
     }
 }
