@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 
 namespace Week1.W1_Homework.csharpcertw1hmwk
 {
