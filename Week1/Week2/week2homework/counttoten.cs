@@ -5,14 +5,11 @@ namespace Week1.Week2
     public class CountToTen
     {
         public void Counting()
-       {
-            // Set integer value
-            int num = 1;
-            // Add 1 to int until condition is met.
-            while(num < 11)
+        {
+            // Basic for loop to iterate solution.
+            for (int x =1; x < 11; x++)
             {
-                Console.WriteLine(num);
-                num++;
+                Console.WriteLine(x);    
             }
         }
     }
