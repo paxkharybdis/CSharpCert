@@ -6,9 +6,12 @@ namespace Week1
 {
     class Program
     {
+        /*
+        gradeswitch myGradeswitch = new 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
+        */
     }
 }
