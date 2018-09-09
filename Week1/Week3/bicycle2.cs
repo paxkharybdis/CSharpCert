@@ -15,13 +15,18 @@ namespace Sandbox
             }
         }
 
-        // Generic private property I can't put within STATIC VOID MAIN without red squiggly lines everywhere.
+        // Generic I can't put within STATIC VOID MAIN without red squiggly lines everywhere.
+        public class genericPart<L>
+        {
+            public void gear(L input) {}
+        }
+        // A priate property that also makes red squiggles.
         private int Wheels { set; get; } = 2;
 
 
         static void Main(string[] args)
         {
-
+            // Declare variables and bool values.
             bool tiresInflated = false;
             var tirePressure = "deflated";
             bool handlebars = false;
@@ -33,6 +38,7 @@ namespace Sandbox
             {
                 string userInput;
 
+                // Present menu items.
                 Console.WriteLine("=======================================");
                 Console.WriteLine("Bicycle Status");
                 Console.WriteLine();
@@ -52,6 +58,7 @@ namespace Sandbox
                 switch (userInput)
                 {
                     case "1":
+                        // Determine if bike is assembled, if so, continue.  If not, prompt to do so.
                         if (bikeAssembled)
                         {
                             Console.WriteLine("Bike is assembled.");
@@ -85,6 +92,7 @@ namespace Sandbox
                         }
                         break;
                     case "2":
+                        // Determine if bike is assembled, if so, present handlebar options.  If not, prompt to do assembly.
                         if (bikeAssembled)
                         {
                             if (handlebars)
@@ -127,6 +135,7 @@ namespace Sandbox
                         }   
                             break;
                        case "3":
+                        // Determine if bike is assembled, if so, present tire options.  If not, prompt to do assembly.
                         if (bikeAssembled)
                         {
                             if (tiresInflated)
@@ -167,12 +176,14 @@ namespace Sandbox
                         }
                         break;
                     case "4":
+                        // Display status of bike components.
                         Console.WriteLine("Bike is {0}.", bikeTogether);
                         Console.WriteLine("Handlebars are {0}.", barsAligned);
                         Console.WriteLine("Tires are currently {0}.", tirePressure);
                         Console.WriteLine();
                         break;
                     case "5":
+                        // Check if all components have been completed.
                         if (bikeAssembled && handlebars && tiresInflated)
                         {
                             Console.WriteLine("Everything works well.");
@@ -185,6 +196,7 @@ namespace Sandbox
                         }
                         break;
                     case "6":
+                        // Display message and exit program.
                         Console.WriteLine("Thank you for using Virtual Bicycle Assistant.  $3600.00 has been charged to your account.");
                         Environment.Exit(0);
                         break;
