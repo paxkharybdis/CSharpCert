@@ -5,7 +5,7 @@ namespace Week1.Fundamentals
     public class dinosaur
     {
             private string _teeth;  // field
-            private string _something;
+            //private string _something;
             private int _size;
 
             public string Color { protected set; get; }  = "Green"; // Property with default property

@@ -4,14 +4,14 @@ namespace Week1.Week2.week2homework
 {
     public class gradeswitch
     {
-        static void Main(string[] args)
+        public void gradeMenu()
         {
             // Display input request
             Console.WriteLine("Please enter a grade.");
             
             // Input grade and assign to variable.
             string grade = Console.ReadLine();
-
+        
             // Compare input to available choices and return appropriate response.
             switch(grade)
             {

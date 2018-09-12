@@ -6,7 +6,7 @@ namespace Week1.W1_Homework.csharpcertw1hmwk
     public class Bicycle
     {
             // Class variable: Field
-            private string _handlebar;
+            public string handlebar;
         
             // Class variable:  Auto Property
             public virtual int Gears {get;} =7;
@@ -16,11 +16,11 @@ namespace Week1.W1_Homework.csharpcertw1hmwk
             {
                 set
                 {
-                    this._handlebar = value;
+                    this.handlebar = value;
                 }
                 get
                 {
-                return _handlebar;
+                return handlebar;
                 }
             }
 
@@ -47,5 +47,10 @@ namespace Week1.W1_Homework.csharpcertw1hmwk
                 Console.WriteLine(type);
             } 
             
+            public void showAll()
+            {
+                Console.WriteLine(handlebar);
+                Console.WriteLine(Gears);
+            }
     }
 }

@@ -1,40 +1,40 @@
 using System;
 using System.Text;
 
-namespace Sandbox
+namespace Fundamentals
 {
-    class Program
+    public class bicycle2
     {
-                // A construct that I can't put within STATIC VOID MAIN without red squiggly lines everywhere.  Even typing PUBLIC blows it all up.
-        public class bicycle
-        {
-            public bool isAssembled;
 
-            
-            public bicycle(string wheels)
-            {
-                this.Wheels = wheels;
-            }
-        }
+        // Declare variables, bools, and properties.
+        bool tiresInflated = false;
+        string tirePressure = "deflated";
+        bool handlebars = false;
+        string barsAligned = "not aligned";
+        bool bikeAssembled = false;
+        string bikeTogether = "not assembled";
 
-        // Generic I can't put within STATIC VOID MAIN without red squiggly lines everywhere.
-        public class genericPart<L>
-        {
-            public void gear(L input) {}
-        }
-        // A priate property that also makes red squiggles.
+        public string Seat { get; set; }
+
+        // Private property.
         private int Wheels { set; get; } = 2;
 
 
-        static void Main(string[] args)
+        // Constructor
+        /*public void seatType(string Seat)
         {
-            // Declare variables and bool values.
-            bool tiresInflated = false;
-            var tirePressure = "deflated";
-            bool handlebars = false;
-            var barsAligned = "not aligned";
-            bool bikeAssembled = false;
-            var bikeTogether = "not assembled";
+            seat = racing
+
+        }
+        // Generic I can't put within STATIC VOID MAIN without red squiggly lines everywhere.
+        public string gear<L>
+        {
+            public void gear(L input) { }
+        */
+        
+        public void bikeMenu()
+        {
+
 
             do
             {
@@ -134,9 +134,9 @@ namespace Sandbox
                         {
                             Console.WriteLine("Bike has not been assembled.  Please assemble bicycle.");
                             Console.WriteLine();
-                        }   
-                            break;
-                       case "3":
+                        }
+                        break;
+                    case "3":
                         // Determine if bike is assembled, if so, present tire options.  If not, prompt to do assembly.
                         if (bikeAssembled)
                         {
@@ -203,14 +203,17 @@ namespace Sandbox
                         Environment.Exit(0);
                         break;
                     default:
+                        Console.WriteLine("Please enter A valid entry.");
+                        Console.WriteLine();
                         break;
                 }
             } while (true);
 
         }
-
     }
 
-
 }
+
+
+
 
