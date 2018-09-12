@@ -5,13 +5,15 @@ namespace Sandbox
 {
     class Program
     {
-        // A construct that I can't put within STATIC VOID MAIN without red squiggly lines everywhere.  Even typing PUBLIC blows it all up.
+                // A construct that I can't put within STATIC VOID MAIN without red squiggly lines everywhere.  Even typing PUBLIC blows it all up.
         public class bicycle
         {
             public bool isAssembled;
-            public bicycle()
+
+            
+            public bicycle(string wheels)
             {
-                isAssembled = false;
+                this.Wheels = wheels;
             }
         }
 
