@@ -8,12 +8,12 @@ namespace Week1.Week2.week2homework
         {
             // Display input request
             Console.WriteLine("Please enter a grade.");
-            
+
             // Input grade and assign to variable.
             string grade = Console.ReadLine();
-        
+
             // Compare input to available choices and return appropriate response.
-            switch(grade)
+            switch (grade)
             {
                 case "E":
                 case "e":
@@ -39,7 +39,7 @@ namespace Week1.Week2.week2homework
                     Console.WriteLine("Please enter valid grade.");
                     break;
             }
-        
+
         }
     }
 }
