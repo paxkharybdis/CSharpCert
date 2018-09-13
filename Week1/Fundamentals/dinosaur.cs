@@ -4,54 +4,61 @@ namespace Week1.Fundamentals
 {
     public class dinosaur
     {
-            private string _teeth;  // field
-            //private string _something;
-            private int _size;
+        private string _teeth;  // field
+        
+        //private string _something;
+        
+        private int _size;
 
-            public string Color { protected set; get; }  = "Green"; // Property with default property
+        public string Color { protected set; get; } = "Green"; // Property with default property
 
-            public int Size
+        public int Size
+        {
+            set
             {
-                set
+                this._size = value;
+            }
+            get
+            {
+                if (_size > 200)
                 {
-                    this._size = value;
+                    Console.WriteLine("You're huge");
                 }
-                get
-                {
-                    if(_size > 200)
-                    {
-                        Console.WriteLine("You're huge");
-                    }
-                    return _size;
-                }
+                return _size;
             }
+        }
 
-            public bool Skin { set; get; }
+        public bool Skin { set; get; }
 
-            public string Teeth 
+        public string Teeth
+        {
+            set
             {
-                 set
-                 {
-                     this._teeth = value;
-                 }
-                 get
-                 {
-                     return _teeth;
-                 }
+                this._teeth = value;
             }
-
-            public virtual void Eat()
+            get
             {
-                Console.WriteLine("Eat");
+                return _teeth;
             }
+        }
 
-            public class Raptor : dinosaur // Inner class
+        public virtual void Eat()
+        {
+            Console.WriteLine("Dinosaur Eat");
+        }
+
+        public void Sleep()
+        {
+            Console.WriteLine("Sleep");
+        }
+
+        public class Raptor : dinosaur // Inner class
+        {
+            public void Group()
             {
-                public void Group()
-                {
-                    Color = "Brown";
-                }
+                Color = "Brown";
             }
+        }
     }
 
     public class TRex : dinosaur
@@ -59,11 +66,12 @@ namespace Week1.Fundamentals
         public void Stomp()
         {
             Color = "Blue";
+            Console.WriteLine("Stomp");
         }
 
         public override void Eat()
         {
-            Console.WriteLine("Rip");
+            Console.WriteLine("TRex Eat");
         }
     }
 }

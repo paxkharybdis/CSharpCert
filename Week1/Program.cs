@@ -2,6 +2,7 @@
 using Week1.W1_Homework.csharpcertw1hmwk;
 using Week1.Week2;
 using Week1.Week2.week2homework;
+using Week1.Fundamentals;
 using Fundamentals;
 
 namespace Week1
@@ -64,6 +65,41 @@ namespace Week1
 
             } while (true);
 
+            dinosaur dino1 = new dinosaur(); // Class instantiation
+            dino1.Size = 10;
+            dino1.Eat(); // Dinosaur Eat
+
+            TRex TRex = new TRex(); // Class instantiation
+            TRex.Size = 20;
+            TRex.Eat();  // TRex Eat
+
+            dinosaur dino2 = new TRex();  // Upcasting (implicitly)
+            dino2.Eat(); //TRrex Eat
+
+            dinosaur dino3 = new Pterodactyl();  // Upcasting (implicitly)
+            dino3.Eat(); // Pteradactyl Eat
+
+            dinosaur dino4 = new dinosaur(); // Downcasting (explicitly)
+            dino4 = (TRex)TRex;
+            dino4.Eat(); // TRex Eat
+            dino4 = (Pterodactyl)dino3;
+            dino4.Eat();  // Pterodactyl Eat
+
+            dinosaur dino6 = dino3 as Pterodactyl;
+            dino6.Sleep();
+            
+
+            dinosaur[] dinoArray = {dino1, dino2, TRex, dino3};
+
+            foreach (dinosaur item in dinoArray)
+            {
+                if(item is TRex) {
+                    item.Eat();
+                }
+                if(item is Pterodactyl) {
+                    item.Sleep();
+                }
+            }
 
             /*Square mySquare = new Square(3, 3);
 
