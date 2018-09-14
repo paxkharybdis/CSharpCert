@@ -101,7 +101,10 @@ namespace Week1
                 }
             }
 
-            /*Square mySquare = new Square(3, 3);
+            Console.WriteLine (Utility.AddTwoNumbersSortOf(5,10));  //Calling static method utility directly, does not create an instance.
+            
+
+            Square mySquare = new Square(3, 3);
 
             //int length, height;
             var (length, height) = mySquare;
@@ -115,7 +118,20 @@ namespace Week1
             Square yourSquare = new Square{Length = 5, Height = 5, Color = "Blue"};
 
             Square happySquare = new Square{ Color = "Brown"};
-            */
+            
+            Square square = new Square(5,5);
+            square.Sides = 4;
+
+            GenericsList<dinosaur> dinoList = new GenericsList<dinosaur>();
+            dinoList.Add(dino1);
+            dinoList.Add(TRex);
+            dinoList.Add(dino2);
+            dinoList.Add(dino3);
+
+            
+
+
+
         }
 
 
