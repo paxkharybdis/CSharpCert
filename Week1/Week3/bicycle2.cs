@@ -21,17 +21,11 @@ namespace Fundamentals
 
 
         // Constructor
-        /*public void seatType(string Seat)
+        public bicycle2()
         {
-            seat = racing
+            this.Seat = Seat;
 
         }
-        // Generic I can't put within STATIC VOID MAIN without red squiggly lines everywhere.
-        public string gear<L>
-        {
-            public void gear(L input) { }
-        */
-
         public void bikeMenu()
         {
 
