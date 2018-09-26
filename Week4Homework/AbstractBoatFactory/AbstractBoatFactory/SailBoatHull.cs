@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace AbstractBoatFactory
 {
-    class SailBoatHull
+    class SailBoatHull : IBoatHull
     {
+        public virtual string BoatHullParts
+        {
+            get { return "Parts for Sailboat Hull"; }
+        }
     }
+    
 }

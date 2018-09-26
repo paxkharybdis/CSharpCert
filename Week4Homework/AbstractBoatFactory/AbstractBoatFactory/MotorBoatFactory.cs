@@ -10,12 +10,12 @@ namespace AbstractBoatFactory
     {
         public override IBoatMotor CreateBoatMotor()
         {
-            return new MotorBoatHull();
+            return new MotorBoatMotor();
         }
 
         public override IBoatHull CreateBoatHull()
         {
-            return new MotorBoatMotor();
+            return new MotorBoatHull();
         }
     }
 
