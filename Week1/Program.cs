@@ -4,15 +4,22 @@ using Week1.Week2;
 using Week1.Week2.week2homework;
 using Week1.Fundamentals;
 using Fundamentals;
+using Advanced;
 
 namespace Week1
 {
     class Program
     {
+        public delegate void TryOn(string type);
 
         static void Main(string[] args)
         {
-            do
+
+            // DelegateSample();
+            // MultiDelegateSample();
+            EventSample();
+            /*
+             * do
             {
                 string menuInput;
 
@@ -130,10 +137,39 @@ namespace Week1
 
             
 
-
+            */
 
         }
 
+        private static void EventSample()
+        {
+            Coats myCoat = new Coats(); // instantiate the class
+            string result = myCoat.MyResult; // Get result from property
+            Console.WriteLine(result);
+        }
 
+        private static void DelegateSample()
+        {
+            Hats myHat = new Hats("Cowboy", 7);
+            TryOn theHat = myHat.TryOnHat;
+            theHat("I tried on a " + myHat.HatType + "hat that was size " + myHat.HatSize);
+
+            Hats mySecond = new Hats();
+        }
+
+        private static void MultiDelegateSample()
+        {
+            Hats moreHats = new Hats(7);
+            TryOn someHats, niceHat, sadHat;
+
+            niceHat = moreHats.FindLuckHat;
+            niceHat("Top");
+
+            sadHat = moreHats.FindUglyHat;
+            sadHat("Dunce");
+
+            someHats = niceHat + sadHat;
+            someHats("Cowboy");
+        }
     }
 }
