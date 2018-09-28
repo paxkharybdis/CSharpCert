@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace BoatBuilderPattern
 {
-    class BoatBuilder
+    public abstract class BoatBuilder
     {
+        public abstract IBoat Boat { get; }
+
+        public virtual void BuildBoatHull() { }
+
+
     }
 }

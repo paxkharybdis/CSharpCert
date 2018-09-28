@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BoatBuilder
+namespace BoatBuilderPattern
 {
-    class SailBoatBuilder
+    class SailBoatBuilder : BoatBuilder
     {
+        private IBoat sailBoatInProgress;
+
+        public override IBoat Boat
+        {
+            get { return sailBoatInProgress; }
+        }
     }
 }

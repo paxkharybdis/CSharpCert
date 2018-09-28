@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BoatBuilderPattern
 {
-    class BoatDirector
+    public abstract class BoatDirector
     {
+        public abstract IBoat Build(BoatBuilder builder);
     }
 }

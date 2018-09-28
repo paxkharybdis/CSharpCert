@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace BoatBuilderPattern
 {
-    class MotorBoatDirector
+    public class MotorBoatDirector : BoatDirector
     {
+        public override IBoat Build(BoatBuilder builder)
+        {
+            builder.BuildBoatHull();
+            return builder.Boat;
+        }
+
+
     }
 }
