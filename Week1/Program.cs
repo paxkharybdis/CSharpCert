@@ -17,7 +17,8 @@ namespace Week1
 
             // DelegateSample();
             // MultiDelegateSample();
-            EventSample();
+            // EventSample();
+            ExceptionSample();
             /*
              * do
             {
@@ -139,6 +140,23 @@ namespace Week1
 
             */
 
+        }
+
+        private static void ExceptionSample()
+        {
+            ExceptionExamples examples = new ExceptionExamples();
+            //examples.MyException();
+            // examples.MySecondExample();
+            examples.MyThirdExample();
+        }
+
+        private static void LambdaSample()
+        {
+            LambdaExamples myLamb = new LambdaExamples();
+            myLamb.MyLambdaOne(myLamb.MyLambdaOne(5));
+
+            LambdaExamples mySecond = new LambdaExamples(23);
+            Console.WriteLine(mySecond.MyLambdaOne(mySecond.MyValue));
         }
 
         private static void EventSample()
