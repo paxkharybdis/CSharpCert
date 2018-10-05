@@ -18,7 +18,9 @@ namespace Week1
             // DelegateSample();
             // MultiDelegateSample();
             // EventSample();
-            ExceptionSample();
+            // ExceptionSample();
+            CollectionExamples();
+
             /*
              * do
             {
@@ -140,6 +142,13 @@ namespace Week1
 
             */
 
+        }
+
+        private static void CollectionExamples()
+        {
+            CollectionExamples mySample = new CollectionExamples();
+
+            mySample.MyArrayListExample();
         }
 
         private static void ExceptionSample()
