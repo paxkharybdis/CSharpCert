@@ -4,6 +4,7 @@ using System.Collections;
 using System.Text;
 using Week1.Fundamentals;
 using Fundamentals;
+
 namespace Advanced
 {
     public class CollectionExamples
@@ -28,10 +29,15 @@ namespace Advanced
 
         public void MyListExample()
         {
-            List<Dinosaur> myDinos = new List<Dinosaur>();
-            myDinos.Add(new Dinosaur() { Size = 50, Teeth = "Serrated", Skin = true });
+            List<dinosaur> myDinos = new List<dinosaur>();
+            myDinos.Add(new dinosaur() { Size = 50, Teeth = "Serrated", Skin = true });
             myDinos.Add(new Pterodactyl() { Size = 25, Teeth = "Sharp" });
-            myDinos.Add(new Dinosaur.Raptor() { Size = 10, Teeth = "Serrated", Skin = false });
+            myDinos.Add(new dinosaur.Raptor() { Size = 10, Teeth = "Serrated", Skin = false });
+
+            foreach (dinosaur dinosaur in myDinos)
+            {
+                Console.WriteLine(dinosaur);
+            }
         }
     }
 }

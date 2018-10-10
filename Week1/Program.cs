@@ -5,6 +5,7 @@ using Week1.Week2.week2homework;
 using Week1.Fundamentals;
 using Fundamentals;
 using Advanced;
+using System.Threading;
 
 namespace Week1
 {
@@ -19,7 +20,8 @@ namespace Week1
             // MultiDelegateSample();
             // EventSample();
             // ExceptionSample();
-            CollectionExamples();
+            // CollectionExamples();
+            ThreadingSample();
 
             /*
              * do
@@ -142,6 +144,21 @@ namespace Week1
 
             */
 
+        }
+
+        private static void ThreadingSample2()
+        {
+            ThreadingExample myExample = new ThreadingExample();
+            Thread thread = new Thread(() => myExample.SimpleMethod(100));
+            thread.Start();
+        }
+
+        private static void ThreadingSample()
+        {
+            Thread thread = new Thread(OldFundamentals);
+            thread.Start();
+
+            MultiDelegateSample();
         }
 
         private static void CollectionExamples()
