@@ -13,12 +13,12 @@ namespace Advanced
 
         private ExampleCallback callback;
 
-        public ThreadWithState(string text, int number, ExampleCallback callbackDelegate);
+        public ThreadWithState(string text, int number, ExampleCallback callbackDelegate)
         {
             boilerplate = text;
             value = number;
             callback = callbackDelegate;
 
         }
-}
+    }
 }

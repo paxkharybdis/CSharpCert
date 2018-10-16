@@ -6,6 +6,9 @@ using Week1.Fundamentals;
 using Fundamentals;
 using Advanced;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Week1
 {
@@ -21,7 +24,10 @@ namespace Week1
             // EventSample();
             // ExceptionSample();
             // CollectionExamples();
-            ThreadingSample();
+            // ThreadingSample();
+            MyAsyncExample();
+
+            #region
 
             /*
              * do
@@ -143,7 +149,42 @@ namespace Week1
             
 
             */
+            #endregion
+        }
 
+        private static void MyLinqExample()
+        {
+            string[] names = { "Tom", "Don", "Harry", "Mary", "Jay" };
+
+            IEnumerable<string> query = names
+                .Where(n => n.Contains("a"))
+                .OrderBy(n => n.Length)
+                .Select(n => n.ToUpper());
+
+            foreach (string name in query) Console.WriteLine(name);
+        }
+
+        private async static void MyAsyncExample()
+        {
+            AsyncUtility myUtility = new AsyncUtility();
+            string myWord = await myUtility.BottlesOfBeerSongAsync();
+            Console.WriteLine(myWord);
+        }
+
+        private static void SimpleTaskExample()
+        {
+            Thread.CurrentThread.Name = "Main";
+
+            // Create a task and supply a user delegate by using a lambda expression
+            Task task = new Task(() => Console.WriteLine("Hello from task."));
+            // Define a run with a Task
+            // Task task = Task.run(() => Console.WriteLine("Hello from task."));
+
+            // Start the task
+            task.Start();
+            // Output a message from the calling thread.
+            Console.WriteLine("Hello from thread '{0}'.", Thread.CurrentThread.Name);
+            task.Wait();
         }
 
         private static void ThreadingSample2()
