@@ -27,17 +27,21 @@ namespace Advanced
             }
         }
 
-        public void MyListExample()
+        public List<dinosaur> MyListExample()
         {
             List<dinosaur> myDinos = new List<dinosaur>();
             myDinos.Add(new dinosaur() { Size = 50, Teeth = "Serrated", Skin = true });
             myDinos.Add(new Pterodactyl() { Size = 25, Teeth = "Sharp" });
             myDinos.Add(new dinosaur.Raptor() { Size = 10, Teeth = "Serrated", Skin = false });
 
+            return myDinos;
+            /*
             foreach (dinosaur dinosaur in myDinos)
             {
                 Console.WriteLine(dinosaur);
-            }
+            }*/
         }
+
+
     }
 }

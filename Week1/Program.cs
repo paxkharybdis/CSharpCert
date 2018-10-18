@@ -25,7 +25,8 @@ namespace Week1
             // ExceptionSample();
             // CollectionExamples();
             // ThreadingSample();
-            MyAsyncExample();
+            // MyAsyncExample();
+            AnonymousTypeExample();
 
             #region
 
@@ -152,6 +153,19 @@ namespace Week1
             #endregion
         }
 
+        private static void AnonymousTypeExample()
+        {
+            CollectionExamples mySample = new CollectionExamples();
+            var myDinos =
+                from dino in mySample.MyListExample()
+                select new { dino.Size, dino.Teeth, dino.Skin };
+
+            foreach (var v in myDinos)
+            {
+                Console.WriteLine("Size = {0}, Teeth = {1}, Skin = {2}", v.Size, v.Teeth, v.Skin);
+            }
+        }
+
         private static void MyLinqExample()
         {
             string[] names = { "Tom", "Don", "Harry", "Mary", "Jay" };
@@ -194,14 +208,14 @@ namespace Week1
             thread.Start();
         }
 
-        private static void ThreadingSample()
+        /*private static void ThreadingSample()
         {
             Thread thread = new Thread(OldFundamentals);
             thread.Start();
 
             MultiDelegateSample();
         }
-
+        */
         private static void CollectionExamples()
         {
             CollectionExamples mySample = new CollectionExamples();
@@ -242,7 +256,7 @@ namespace Week1
             Hats mySecond = new Hats();
         }
 
-        private static void MultiDelegateSample()
+        /*private static void MultiDelegateSample()
         {
             Hats moreHats = new Hats(7);
             TryOn someHats, niceHat, sadHat;
@@ -255,6 +269,6 @@ namespace Week1
 
             someHats = niceHat + sadHat;
             someHats("Cowboy");
-        }
+        }*/
     }
 }

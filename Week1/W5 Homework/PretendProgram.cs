@@ -6,23 +6,23 @@ namespace Week1.W5_Homework
 {
     class PretendProgram
     {
-        public delegate void TryOn(string type);
+        public delegate int TheMagicNumber(int _magicNumber);
+        public int _magicNumber { get; set; }
 
         static void PretendMain(string[] args)
         {
-
-
+            DelegateSample();
         }
 
 
-        private static void DelegateSample()
+        private static int DelegateSample()
         {
-            Hats myHat = new Hats("Cowboy", 7);
-            TryOn theHat = myHat.TryOnHat;
-            theHat("I tried on a " + myHat.HatType + "hat that was size " + myHat.HatSize);
 
-            Hats mySecond = new Hats();
+            DelegateExample delegateExample = new DelegateExample();
+            DelegateExample.TheMagicNumber theMagicNumber = new DelegateExample.TheMagicNumber(delegateExample.TheLuckyNumber());
+            int result = theMagicNumber(7777);
+            Console.WriteLine("Your Lucky Number is " + result + ".");
+            return result;
         }
-
     }
 }
